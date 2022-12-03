@@ -45,9 +45,9 @@ const Home = () => {
 
                 <div className="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div className="navbar-nav ml-auto">
-                        <a href="index.html" className="nav-item nav-link active">Home</a>
-                        <a href="about.html" className="nav-item nav-link">About</a>
-                        <a href="causes.html" className="nav-item nav-link">Causes</a>
+                        <a href="/" className="nav-item nav-link active">Home</a>
+                        <a href="/about" className="nav-item nav-link">About</a>
+                        <a href="/causes" className="nav-item nav-link">Causes</a>
                         <a href="event.html" className="nav-item nav-link">Events</a>
                         <a href="blog.html" className="nav-item nav-link">Blog</a>
                         <div className="nav-item dropdown">
