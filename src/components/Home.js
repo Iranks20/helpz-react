@@ -1,4 +1,9 @@
 import React from "react";
+import OwlCarousel from 'react-owl-carousel';  
+
+import 'owl.carousel/dist/assets/owl.carousel.css';  
+
+import 'owl.carousel/dist/assets/owl.theme.default.css';  
 
 
 
@@ -71,7 +76,8 @@ const Home = () => {
         <!-- Carousel Start --> */}
         <div className="carousel">
             <div className="container-fluid">
-                <div className="owl-carousel">
+                <div className>
+                <OwlCarousel items={1} margin={1} autoplay ={true} >
                     <div className="carousel-item">
                         <div className="carousel-img">
                             <img src="assets/img/carousel-1.jpg" alt="Image" />
@@ -117,6 +123,7 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
+                 </ OwlCarousel>
                 </div>
             </div>
         </div>
