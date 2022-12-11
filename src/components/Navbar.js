@@ -45,7 +45,7 @@ const Navbar = () => {
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav ml-auto">
                         <a href="/" class="nav-item nav-link">Home</a>
-                        <a href="/about" class="nav-item nav-link active">About</a>
+                        <a href="/about" class="nav-item nav-link">About</a>
                         <a href="/causes" class="nav-item nav-link">Causes</a>
                         <a href="/event" class="nav-item nav-link">Events</a>
                         <a href="/blog" class="nav-item nav-link">Blog</a>
