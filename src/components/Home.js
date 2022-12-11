@@ -4,76 +4,14 @@ import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';  
 
 import 'owl.carousel/dist/assets/owl.theme.default.css';  
-
+import Navbar from "./Navbar";
 
 
 const Home = () => {
     return(
         <div>
-            <div className="top-bar d-none d-md-block">
-            <div className="container-fluid">
-                <div className="row">
-                    <div className="col-md-8">
-                        <div className="top-bar-left"> 
-                            <div className="text">
-                                <i className="fa fa-phone-alt"></i>
-                                <p>+123 456 7890</p>
-                            </div>
-                            <div className="text">
-                                <i className="fa fa-envelope"></i>
-                                <p>info@example.com</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-4">
-                        <div className="top-bar-right">
-                            <div className="social">
-                                <a href=""><i className="fab fa-twitter"></i></a>
-                                <a href=""><i className="fab fa-facebook-f"></i></a>
-                                <a href=""><i className="fab fa-linkedin-in"></i></a>
-                                <a href=""><i className="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        {/* <!-- Top Bar End -->
+        <Navbar />    
 
-        <!-- Nav Bar Start --> */}
-        <div className="navbar navbar-expand-lg bg-dark navbar-dark">
-            <div className="container-fluid">
-                <a href="index.html" className="navbar-brand">Helpz</a>
-                <button type="button" className="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-
-                <div className="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                    <div className="navbar-nav ml-auto">
-                        <a href="/" className="nav-item nav-link active">Home</a>
-                        <a href="/about" className="nav-item nav-link">About</a>
-                        <a href="/causes" className="nav-item nav-link">Causes</a>
-                        <a href="/event" className="nav-item nav-link">Events</a>
-                        <a href="/blog" className="nav-item nav-link">Blog</a>
-                        <div className="nav-item dropdown">
-                            <a href="#" className="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
-                            <div className="dropdown-menu">
-                                <a href="single.html" className="dropdown-item">Detail Page</a>
-                                <a href="service.html" className="dropdown-item">What We Do</a>
-                                <a href="team.html" className="dropdown-item">Meet The Team</a>
-                                <a href="donate.html" className="dropdown-item">Donate Now</a>
-                                <a href="volunteer.html" className="dropdown-item">Become A Volunteer</a>
-                            </div>
-                        </div>
-                        <a href="contact.html" className="nav-item nav-link">Contact</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        {/* <!-- Nav Bar End -->
-
-
-        <!-- Carousel Start --> */}
         <div className="carousel">
             <div className="container-fluid">
                 <div className>

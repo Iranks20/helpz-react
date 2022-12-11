@@ -6,6 +6,10 @@ import About from './components/About';
 import Causes from './components/Causes';
 import Event from './components/Event';
 import Blog from './components/Blog';
+import Donate from './components/Donate';
+import Volunteer from './components/Volunteer';
+import Contact from './components/Contact';
+
 import { Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -16,6 +20,9 @@ function App() {
       <Route path='/causes' element= {<Causes />} />
       <Route path='/event' element= {<Event />} />
       <Route path='/blog' element= {<Blog />} />
+      <Route path='/donate' element= {<Donate />} />
+      <Route path='/volunteer' element= {<Volunteer />} />
+      <Route path='/contact' element= {<Contact />} />
 
     </Routes>
   );
