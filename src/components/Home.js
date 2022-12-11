@@ -53,8 +53,8 @@ const Home = () => {
                         <a href="/" className="nav-item nav-link active">Home</a>
                         <a href="/about" className="nav-item nav-link">About</a>
                         <a href="/causes" className="nav-item nav-link">Causes</a>
-                        <a href="event.html" className="nav-item nav-link">Events</a>
-                        <a href="blog.html" className="nav-item nav-link">Blog</a>
+                        <a href="/event" className="nav-item nav-link">Events</a>
+                        <a href="/blog" className="nav-item nav-link">Blog</a>
                         <div className="nav-item dropdown">
                             <a href="#" className="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
                             <div className="dropdown-menu">
