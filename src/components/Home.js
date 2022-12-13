@@ -7,7 +7,33 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 import Navbar from "./Navbar";
 
 
+
 const Home = () => {
+
+    function makePayment() {
+        FlutterwaveCheckout({
+          public_key: "FLWPUBK_TEST-SANDBOXDEMOKEY-X",
+          tx_ref: "titanic-48981487343MDI0NzMx",
+          amount: 54600,
+          currency: "NGN",
+          payment_options: "card, mobilemoneyghana, ussd",
+          redirect_url: "https://glaciers.titanic.com/handle-flutterwave-payment",
+          meta: {
+            consumer_id: 23,
+            consumer_mac: "92a3-912ba-1192a",
+          },
+          customer: {
+            email: "rose@unsinkableship.com",
+            phone_number: "08102909304",
+            name: "Rose DeWitt Bukater",
+          },
+          customizations: {
+            title: "The Titanic Store",
+            description: "Payment for an awesome cruise",
+            logo: "https://www.logolynx.com/images/logolynx/22/2239ca38f5505fbfce7e55bbc0604386.jpeg",
+          },
+        });
+      }
     return(
         <div>
         <Navbar />    
@@ -26,7 +52,7 @@ const Home = () => {
                                 Lorem ipsum dolor sit amet elit. Phasellus ut mollis mauris. Vivamus egestas eleifend dui ac consequat at lectus in malesuada
                             </p>
                             <div className="carousel-btn">
-                                <a className="btn btn-custom" href="">Donate Now</a>
+                                <a className="btn btn-custom" type="button" onClick={makePayment}>Donate Now</a>
                                 <a className="btn btn-custom btn-play" data-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">Watch Video</a>
                             </div>
                         </div>
