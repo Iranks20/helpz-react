@@ -5,35 +5,30 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 
 import 'owl.carousel/dist/assets/owl.theme.default.css';  
 import Navbar from "./Navbar";
+import { useFlutterwave, closePaymentModal } from 'flutterwave-react-v3';
 
 
 
 const Home = () => {
-
-    function makePayment() {
-        FlutterwaveCheckout({
-          public_key: "FLWPUBK_TEST-SANDBOXDEMOKEY-X",
-          tx_ref: "titanic-48981487343MDI0NzMx",
-          amount: 54600,
-          currency: "NGN",
-          payment_options: "card, mobilemoneyghana, ussd",
-          redirect_url: "https://glaciers.titanic.com/handle-flutterwave-payment",
-          meta: {
-            consumer_id: 23,
-            consumer_mac: "92a3-912ba-1192a",
-          },
-          customer: {
-            email: "rose@unsinkableship.com",
-            phone_number: "08102909304",
-            name: "Rose DeWitt Bukater",
-          },
-          customizations: {
-            title: "The Titanic Store",
-            description: "Payment for an awesome cruise",
-            logo: "https://www.logolynx.com/images/logolynx/22/2239ca38f5505fbfce7e55bbc0604386.jpeg",
-          },
-        });
-      }
+    const config = {
+        public_key: 'FLWPUBK_TEST-2bf87f5d06494260c72f343a65e7479d-X',
+        tx_ref: Date.now(),
+        amount: 100,
+        currency: 'UGX',
+        payment_options: 'card,mobilemoney,ussd',
+        customer: {
+          email: 'user@gmail.com',
+           phone_number: '0771289654',
+          name: 'john doe',
+        },
+        customizations: {
+          title: 'my Payment Title',
+          description: 'Payment for items in cart',
+          logo: 'https://st2.depositphotos.com/4403291/7418/v/450/depositphotos_74189661-stock-illustration-online-shop-log.jpg',
+        },
+      };
+    
+      const handleFlutterPayment = useFlutterwave(config);
     return(
         <div>
         <Navbar />    
@@ -52,7 +47,7 @@ const Home = () => {
                                 Lorem ipsum dolor sit amet elit. Phasellus ut mollis mauris. Vivamus egestas eleifend dui ac consequat at lectus in malesuada
                             </p>
                             <div className="carousel-btn">
-                                <a className="btn btn-custom" type="button" onClick={makePayment}>Donate Now</a>
+                                <a className="btn btn-custom" href="https://sandbox-flw-web-v3.herokuapp.com/donate/pp1hp5b1vb19">Donate Now</a>
                                 <a className="btn btn-custom btn-play" data-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">Watch Video</a>
                             </div>
                         </div>
@@ -67,7 +62,7 @@ const Home = () => {
                                 Morbi sagittis turpis id suscipit feugiat. Suspendisse eu augue urna. Morbi sagittis, orci sodales varius fermentum, tortor
                             </p>
                             <div className="carousel-btn">
-                                <a className="btn btn-custom" href="">Donate Now</a>
+                                <button className="btn btn-custom" onClick={() => {handleFlutterPayment({callback: (response) => {console.log(response);closePaymentModal()},onClose: () => {},});}}>Donate Now</button>
                                 <a className="btn btn-custom btn-play" data-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">Watch Video</a>
                             </div>
                         </div>
@@ -82,7 +77,7 @@ const Home = () => {
                                 Sed ultrices, est eget feugiat accumsan, dui nibh egestas tortor, ut rhoncus nibh ligula euismod quam. Proin pellentesque odio
                             </p>
                             <div className="carousel-btn">
-                                <a className="btn btn-custom" href="">Donate Now</a>
+                                <button className="btn btn-custom" onClick={() => {handleFlutterPayment({callback: (response) => {console.log(response);closePaymentModal()},onClose: () => {},});}}>Donateeeeeee Now</button>
                                 <a className="btn btn-custom btn-play" data-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">Watch Video</a>
                             </div>
                         </div>
