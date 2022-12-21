@@ -32,7 +32,7 @@ const Blog = () => {
                     <div class="col-lg-4">
                         <div class="blog-item">
                             <div class="blog-img">
-                                <img src="img/blog-1.jpg" alt="Image" />
+                                <img src="assets/img/blog-1.jpg" alt="Image" />
                             </div>
                             <div class="blog-text">
                                 <h3><a href="#">Lorem ipsum dolor sit</a></h3>
@@ -49,7 +49,7 @@ const Blog = () => {
                     <div class="col-lg-4">
                         <div class="blog-item">
                             <div class="blog-img">
-                                <img src="img/blog-2.jpg" alt="Image" />
+                                <img src="assets/img/blog-2.jpg" alt="Image" />
                             </div>
                             <div class="blog-text">
                                 <h3><a href="#">Lorem ipsum dolor sit</a></h3>
@@ -66,7 +66,7 @@ const Blog = () => {
                     <div class="col-lg-4">
                         <div class="blog-item">
                             <div class="blog-img">
-                                <img src="img/blog-3.jpg" alt="Image" />
+                                <img src="assets/img/blog-3.jpg" alt="Image" />
                             </div>
                             <div class="blog-text">
                                 <h3><a href="#">Lorem ipsum dolor sit</a></h3>
@@ -83,7 +83,7 @@ const Blog = () => {
                     <div class="col-lg-4">
                         <div class="blog-item">
                             <div class="blog-img">
-                                <img src="img/blog-1.jpg" alt="Image" />
+                                <img src="assets/img/blog-1.jpg" alt="Image" />
                             </div>
                             <div class="blog-text">
                                 <h3><a href="#">Lorem ipsum dolor sit</a></h3>
@@ -100,7 +100,7 @@ const Blog = () => {
                     <div class="col-lg-4">
                         <div class="blog-item">
                             <div class="blog-img">
-                                <img src="img/blog-2.jpg" alt="Image" />
+                                <img src="assets/img/blog-2.jpg" alt="Image" />
                             </div>
                             <div class="blog-text">
                                 <h3><a href="#">Lorem ipsum dolor sit</a></h3>
@@ -117,7 +117,7 @@ const Blog = () => {
                     <div class="col-lg-4">
                         <div class="blog-item">
                             <div class="blog-img">
-                                <img src="img/blog-3.jpg" alt="Image" />
+                                <img src="assets/img/blog-3.jpg" alt="Image" />
                             </div>
                             <div class="blog-text">
                                 <h3><a href="#">Lorem ipsum dolor sit</a></h3>

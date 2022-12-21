@@ -121,7 +121,7 @@ const Causes = () => {
                     <h2>Let's know about charity causes around the world</h2>
                 </div>
                 <div class="container-fluid">
-                <OwlCarousel items={1} margin={1} autoplay ={true} >
+                <OwlCarousel items={1} margin={1} autoplay ={true} mouseDrag={true} >
                     <div class="causes-item">
                         <div class="causes-img">
                             <img src="assets/img/causes-1.jpg" alt="Image" />

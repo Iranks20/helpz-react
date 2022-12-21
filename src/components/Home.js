@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import OwlCarousel from 'react-owl-carousel';  
 
 import 'owl.carousel/dist/assets/owl.carousel.css';  
@@ -10,6 +10,8 @@ import { useFlutterwave, closePaymentModal } from 'flutterwave-react-v3';
 
 
 const Home = () => {
+    const [email, setEmail] = useState();
+    const [names, setNames] = useState();
     const config = {
         public_key: 'FLWPUBK_TEST-2bf87f5d06494260c72f343a65e7479d-X',
         tx_ref: Date.now(),
@@ -17,9 +19,9 @@ const Home = () => {
         currency: 'UGX',
         payment_options: 'card,mobilemoney,ussd',
         customer: {
-          email: 'user@gmail.com',
+          email: email,
            phone_number: '0771289654',
-          name: 'john doe',
+          name: names,
         },
         customizations: {
           title: 'my Payment Title',
@@ -47,8 +49,8 @@ const Home = () => {
                                 Lorem ipsum dolor sit amet elit. Phasellus ut mollis mauris. Vivamus egestas eleifend dui ac consequat at lectus in malesuada
                             </p>
                             <div className="carousel-btn">
-                                <a className="btn btn-custom" href="https://sandbox-flw-web-v3.herokuapp.com/donate/pp1hp5b1vb19">Donate Now</a>
-                                <a className="btn btn-custom btn-play" data-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">Watch Video</a>
+                                <a className="btn btn-custom" href="https://flutterwave.com/donate/bon41nrvtdpd">Donate Now</a>
+                                {/* <a className="btn btn-custom btn-play" data-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">Watch Video</a> */}
                             </div>
                         </div>
                     </div>
@@ -62,9 +64,10 @@ const Home = () => {
                                 Morbi sagittis turpis id suscipit feugiat. Suspendisse eu augue urna. Morbi sagittis, orci sodales varius fermentum, tortor
                             </p>
                             <div className="carousel-btn">
-                                <button className="btn btn-custom" onClick={() => {handleFlutterPayment({callback: (response) => {console.log(response);closePaymentModal()},onClose: () => {},});}}>Donate Now</button>
-                                <a className="btn btn-custom btn-play" data-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">Watch Video</a>
-                            </div>
+                            {/* onClick={() => {handleFlutterPayment({callback: (response) => {console.log(response);closePaymentModal()},onClose: () => {},});}} */}
+                                <a className="btn btn-custom" href="https://flutterwave.com/donate/bon41nrvtdpd">Donate Now</a>
+                                 {/* <a className="btn btn-custom btn-play" data-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">Watch Video</a> */}
+                            </div> 
                         </div>
                     </div>
                     <div className="carousel-item">
@@ -77,8 +80,8 @@ const Home = () => {
                                 Sed ultrices, est eget feugiat accumsan, dui nibh egestas tortor, ut rhoncus nibh ligula euismod quam. Proin pellentesque odio
                             </p>
                             <div className="carousel-btn">
-                                <button className="btn btn-custom" onClick={() => {handleFlutterPayment({callback: (response) => {console.log(response);closePaymentModal()},onClose: () => {},});}}>Donateeeeeee Now</button>
-                                <a className="btn btn-custom btn-play" data-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">Watch Video</a>
+                                <a className="btn btn-custom" href="https://flutterwave.com/donate/bon41nrvtdpd">Donate Now</a>
+                                {/* <a className="btn btn-custom btn-play" data-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">Watch Video</a> */}
                             </div>
                         </div>
                     </div>
@@ -406,12 +409,13 @@ const Home = () => {
                     </div>
                     <div className="col-lg-5">
                         <div className="donate-form">
-                            <form>
+                            {/* donate form 1 */}
+                            <form onSubmit={() => {handleFlutterPayment({callback: (response) => {console.log(response);closePaymentModal()},onClose: () => {},});}}>
                                 <div className="control-group">
-                                    <input type="text" className="form-control" placeholder="Name" required="required" />
+                                    <input type="text" className="form-control" placeholder="Name" required="required" value={names} onChange={(e) => setNames(e.target.value)} />
                                 </div>
                                 <div className="control-group">
-                                    <input type="email" className="form-control" placeholder="Email" required="required" />
+                                    <input type="email" className="form-control" placeholder="Email" required="required" value={email} onChange={(e) => setEmail(e.target.value)} />
                                 </div>
                                 <div className="btn-group btn-group-toggle" data-toggle="buttons">
                                     <label className="btn btn-custom active">
@@ -428,6 +432,7 @@ const Home = () => {
                                     <button className="btn btn-custom" type="submit">Donate Now</button>
                                 </div>
                             </form>
+                            {/* donate form 1 end */}
                         </div>
                     </div>
                 </div>
